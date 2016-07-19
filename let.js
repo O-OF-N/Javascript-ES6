@@ -20,6 +20,21 @@ console.log(`int value from outside ${int}`);
 //int value from inside 11
 //int value from outside 11
 
+//Block scope in ES-5
+
+var scope = function() {    
+var int = 10;    
+if(int < 11){   
+    (function xx(){     
+    var int = 11;        
+    console.log(`int value from inside ${int}`);
+    })();  
+ }   
+console.log(`int value from outside ${int}`);
+}();
+//Output:
+//int value from inside 11
+//int value from outside 10
 
 //ES-6
 var scope = function() {    

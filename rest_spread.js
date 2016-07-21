@@ -17,7 +17,7 @@ add(1,[2,3,4]);
 // Same case in ES-6 using REST parameters.
 // REST parameters are represented using the spread operator
 var add = function(a,...b){     
-    console.log(a+(b.reduce((x,y)=>{return x+y}))); 
+    console.log(b.reduce((x,y)=>{return x+y}),a); 
 }; 
 add(1,2,3,4);
 

@@ -23,6 +23,8 @@ console.log(p1.fullName());
     couple of work arounds
         * Add like ES5 after class declaration. Ex: StaticName1
         * Add a static getter. Ex: StaticName2
+=> Static methods can be added by prefixing the static keyword.
+    Ex:staticMethod
 => Computer Methods:
     This is nothing new to Javascript. see ex: computedMethod
 */
@@ -48,6 +50,9 @@ static get StaticName2(){
 [computedMethod](){
     return this.firstName+this.lastName+' from computed';
 }
+static staticMethod(){
+    return 'Static Method';
+}
 }
 Person.StaticName1 = 'StaticName1';
 var p1 = new Person('first','last');
@@ -57,4 +62,6 @@ console.log(p1.name);
 console.log(Person.StaticName1);
 console.log(Person.StaticName2);
 console.log(p1[computedMethod]());
+console.log(Person.staticMethod());
+
 

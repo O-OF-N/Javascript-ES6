@@ -23,8 +23,11 @@ console.log(p1.fullName());
     couple of work arounds
         * Add like ES5 after class declaration. Ex: StaticName1
         * Add a static getter. Ex: StaticName2
+=> Computer Methods:
+    This is nothing new to Javascript. see ex: computedMethod
 */
 //ES-6
+const computedMethod = 'concat'
 class Person{    
 constructor(firstName,lastName){        
 this.firstName = firstName;        
@@ -42,6 +45,9 @@ set Name(n){
 static get StaticName2(){
     return 'StaticName2';
 }
+[computedMethod](){
+    return this.firstName+this.lastName+' from computed';
+}
 }
 Person.StaticName1 = 'StaticName1';
 var p1 = new Person('first','last');
@@ -50,4 +56,5 @@ p1.name = 'test';
 console.log(p1.name);
 console.log(Person.StaticName1);
 console.log(Person.StaticName2);
+console.log(p1[computedMethod]());
 

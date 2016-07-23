@@ -63,5 +63,3 @@ console.log(Person.StaticName1);
 console.log(Person.StaticName2);
 console.log(p1[computedMethod]());
 console.log(Person.staticMethod());
-
-
